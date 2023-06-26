@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get('http://localhost:3001/quote');
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/quote`);
         setData(response.data[0])
       } catch (error) {
         console.error(error);
